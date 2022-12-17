@@ -3,7 +3,7 @@
 This repository contains a web application for parsing the information about research articles on [Google Scholar](https://scholar.google.com/)
 
 ## Web Links for :
-1. [Render](https://scholarparser.onrender.com)
+1. [Render](https://googlescholarparser.onrender.com)
 2. [AWS]()
 3. [Azure]()
 
