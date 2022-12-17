@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Article Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header">ARTICLES</div>
+
+   <table cellspacing="0">
+      <tr>
+         <th width="200">Title</th>
+         <th width="200">Author</th>
+         <th width="100">Year</th>
+         <th width="200">Journal</th>
+         <th width="200">Host</th>
+         <th width="200">Host_URL</th>
+         <th width="200">Abstract</th>
+         <th width="100">Citations</th>
+         <th width="200">PDF_link</th>
+
+      </tr>
+         {% for ARTICLE in ARTICLES_DATA %}
+      <tr>
+          <td>{{ARTICLE['TITLE']}}</td>
+          <td>{{ARTICLE['AUTHOR']}}</td>
+          <td>{{ARTICLE['PUBLICATION_YEAR']}}</td>
+          <td>{{ARTICLE['JOURNAL']}}</td>
+          <td>{{ARTICLE['HOST']}} </td>
+          <td>{{ARTICLE['HOST_URL']}}</td>
+          <td>{{ARTICLE['ABSTRACT']}}</td>
+          <td>{{ARTICLE['CITATIONS']}}</td>
+          <td>{{ARTICLE['PDF_LINK']}} </td>
+
+       {% endfor %}
+   </table>
+</div>
+
+
+
+</body>
+
+</html>
