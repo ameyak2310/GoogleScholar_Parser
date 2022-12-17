@@ -80,8 +80,7 @@ def index():
                     ABSTRACT = 'NA'
 
                 try:
-                    CITE_INFO = ARTICLE.select_one('a:contains("Cited by")').text if ARTICLE.select_one(
-                        'a:contains("Cited by")') is not None else 'No citation count'
+                    CITE_INFO = ARTICLE.select_one('a:contains("Cited by")').text if ARTICLE.select_one('a:contains("Cited by")') is not None else 'No citation count'
                 except:
                     CITE_INFO = 'NA'
 
